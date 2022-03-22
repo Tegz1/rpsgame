@@ -1,34 +1,33 @@
 "use strict";
 
-let answer;
+let answer = "";
 let score = 0;
+let result = ""
 
 function computerPlay(){
     let randomIndex = Math.floor(Math.random() * 3)
     const answerArray = ['Rock', 'Paper', 'Scissors']
-    
     answer = answerArray[randomIndex]
-    console.log(answer)
-    console.log(score)
+    
 }
 
+function playRound( playerSelection = "", computerSelection){
+    playerSelection = window.event.target.value
 
-
-function playRound(playerSelection, computerSelection){
     computerPlay()
-    playerSelection = prompt()
     if(playerSelection.toLowerCase() === answer.toLowerCase()){
         score += 1
-       return 'You win!'
+        result = "You win! Your score is: "
     }else{
-        return 'You lose'
+        result = "You lose! Your score is "
     }
+
+    return document.getElementById("score-div").innerHTML = result + score;
 }
 
 
-function game(){
-    for (let i = 0; i < 5; i++) {
-        playRound()
-     }
-}
-game()
+
+
+
+
+
