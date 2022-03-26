@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+
+main{
+    position: relative;
+    margin: auto;
+}
+
+#container-div{
+    display: grid;
+    gap: 4px;
+    border: 2px solid black;
+    padding: 0;
+}
+
+.divs{
+    width: 50px;
+    height: 50px;
+    border: 1px dashed blueviolet;
+    display: inline-flex; 
+}
+
+#reset-button{
+    background-color: black;
+    padding: 15px;
+    border-radius: 10%;
+    color: aqua;
+    font-size: larger;
+    position: relative;
+    left: 50%;
+    margin: 10px 0;
+    border: 1px dashed aqua;
+    cursor: pointer;
+}
+
