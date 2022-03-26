@@ -1,20 +1,21 @@
-"use strict";
 
-let answer = "";
-let score = 0;
-let result = ""
+ let score = 0;
+
+
 
 function computerPlay(){
     let randomIndex = Math.floor(Math.random() * 3)
     const answerArray = ['Rock', 'Paper', 'Scissors']
-    answer = answerArray[randomIndex]
+    return answerArray[randomIndex]
     
 }
 
-function playRound( playerSelection = "", computerSelection){
+function playRound(){
+   
+    let result;
     playerSelection = window.event.target.value
 
-    computerPlay()
+    const answer = computerPlay()
     if(playerSelection.toLowerCase() === answer.toLowerCase()){
         score += 1
         result = "You win! Your score is: "
