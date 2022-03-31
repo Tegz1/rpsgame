@@ -46,6 +46,6 @@ function resetGrid(){
 }
 
 createDivs(16,16)
-console.log(createDivs)
+
 
 
