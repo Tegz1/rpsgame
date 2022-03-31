@@ -20,7 +20,7 @@ function createDivs(rows, cols){
             })
         }
     }else{
-        box.style.display = "none"
+        box.innerHTML = ""
     }
 }
 

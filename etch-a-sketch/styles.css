@@ -13,7 +13,6 @@ main{
 #container-div{
     display: grid;
     gap: 4px;
-    border: 2px solid black;
     padding: 0;
 }
 
@@ -24,16 +23,15 @@ main{
     display: inline-flex; 
 }
 
-#reset-button{
+#reset-button button{
     background-color: black;
+    margin: 10px auto;
+    display: block;
+    color: aqua;
     padding: 15px;
     border-radius: 10%;
-    color: aqua;
-    font-size: larger;
-    position: relative;
-    left: 50%;
-    margin: 10px 0;
     border: 1px dashed aqua;
+    font-size: large;
     cursor: pointer;
 }
 

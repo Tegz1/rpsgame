@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main-div{
+    height: 500px;
+    width: 400px;
+    background-color: rgb(103, 126, 126);
+    margin: auto;
+    border-radius: 5%; 
+}
+
+#screen{
+    background-color: rgb(208, 230, 237);
+    margin: 10px auto 20px;
+    height: 190px;
+    width: 90%;
+    
+}
+
+#buttons-div{
+    display: grid;
+    margin: auto;
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+     
+}
+
+#buttons-div button{
+    font-size: 50px;
+    background-color: rgb(183, 242, 242);
+}
+
+#screen p{
+    position: relative;
+    top: 80%;
+    right: 3%;
+    text-align: right;
+    font-size: 30px;
+}
+#clear{
+    margin-left: 10%;
+    background-color: black;
+    color: rgb(183, 242, 242);
+    font-weight: bold;
+    cursor: pointer;
+}
