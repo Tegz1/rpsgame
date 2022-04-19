@@ -1,0 +1,71 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#books-container{
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.book{
+    border: 2px solid rgb(41, 40, 40);
+    display: inline-grid;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.remove-book{
+    background-color: rgb(42, 40, 40);
+    height: 40px;
+    width: 49.5%;
+    color: rgb(242, 6, 10);
+}
+
+.info-delete-buttons{
+    display: inline-block;
+}
+
+form{
+    background-color: aquamarine;
+    width: 350px;
+    margin: 20px 10px;
+    font-size: 25px;
+    display: none;
+}
+form label{
+    float:left;
+     
+}
+.input{
+    float:right;
+    padding: 5px;
+    width: 250px;
+}
+select{
+    margin-left: 7.8%;
+    padding: 5px;
+}
+
+#submit{
+    padding: 5px;
+    font-weight: bold;
+    margin-left: 24%;
+    cursor: pointer;
+}
+
+#add-book{
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: rgb(95, 247, 0);
+}
+
+#no-books{
+ display: none;
+}

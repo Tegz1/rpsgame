@@ -24,8 +24,7 @@ body{
     display: grid;
     margin: auto;
     width: 90%;
-    grid-template-columns: repeat(4, 1fr);
-     
+    grid-template-columns: repeat(4, 1fr);  
 }
 
 #buttons-div button{
@@ -46,4 +45,22 @@ body{
     color: rgb(183, 242, 242);
     font-weight: bold;
     cursor: pointer;
+}
+
+#buttons-div{
+    display: grid;
+    margin: auto;
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);  
+}
+
+#equal-button{
+        background-color: rgb(183, 242, 242);
+        position: relative;  
+        bottom: 12.7%;
+        left: 72.5%;
+        width: 88px;
+        height: 63px;
+        font-size: 40px;
+
 }
