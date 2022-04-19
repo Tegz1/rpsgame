@@ -1,12 +1,8 @@
 
-let inputLeft = [];
 let startPosition = 0
-let leftSide;
-let runningTotal;
+let start = 0;
 
 function calculate(operator, n1, n2){
-
-
     let result;
     switch(operator){
         case "+":
@@ -21,20 +17,22 @@ function calculate(operator, n1, n2){
             result = 0
     }
     return result;
-
 }
-let start = 0;
+
 function usegetOperatorPosition(){
     inputArray = display().split(" ");
+    
+    //Start 
+   /*
     console.log(inputArray)
     bodmasArray = [];
     leftBodmasArray = [];
-   //Start 
+   
     inputArray.forEach((i) => {
         if(i === "/"){
             for(e = inputArray.indexOf(i); e <= inputArray.length; e++){
                 if(inputArray[e] !== "/" || inputArray[e] !== "+" || inputArray[e] !== "-" || inputArray[e] !== "*"){
-                    console.log(e)
+                    console.log(e)gi
                     bodmasArray.push(inputArray[e + 1])
                 }
             }
@@ -45,7 +43,7 @@ function usegetOperatorPosition(){
                     bodmasArray.unshift(inputArray[f])
                 }
             }   
-        }/*else if(i === "*"){
+        }else if(i === "*"){
             console.log(i)
             for(e = inputArray.indexOf(i); e <= inputArray.length; e++){
                 if(inputArray[e] !== "/" || inputArray[e] !== "+" || inputArray[e] !== "-" || inputArray[e] !== "*"){
@@ -60,12 +58,12 @@ function usegetOperatorPosition(){
                     bodmasArray.unshift(inputArray[f + 1])
                 }
             }   
-        }*/
+       
     })
 
     console.log(leftBodmasArray)
     console.log(bodmasArray);
-  
+   }*/
 //End
     let Total;
    
@@ -90,9 +88,7 @@ function usegetOperatorPosition(){
 
 function getOperatorPosition(input, startPosition) {
     for(i = startPosition; i <= input.length; i++){
-       
         if(input[i] === "+" || input[i] === "-" || input[i] === "/" || input[i] === "*" || input[i] === ""){
-            
            start = i + 1
            currentPosition = i
            operator = input[i]
@@ -105,15 +101,29 @@ function display(){
     if(display.innerText === "0"){
         display.innerText = ""
     }
-    let inputValue = window.event.target.value;
-    display.innerText += ` ${inputValue}` ;
-    return display.innerHTML 
+ 
+    if(window.event.target.value === "+" || window.event.target.value === "-" || window.event.target.value === "*" || window.event.target.value === "/"){
+        if(display.innerText.charAt(display.innerText.length - 1) ===  "+"  || display.innerText.charAt(display.innerText.length - 1) ===  "*" || display.innerText.charAt(display.innerText.length - 1) ===  "/" || display.innerText.charAt(display.innerText.length - 1) ===  "*" || display.innerText.charAt(display.innerText.length - 1) ===  "-"){
+            display.innerText =  display.innerText.slice(0, - 1) + window.event.target.value
+        }else {
+            display.innerText += ` ${window.event.target.value}`
+        }
+    }else{
+        display.innerText += ` ${window.event.target.value}`
+    }
+   return display.innerHTML
 }
 
 function clearDisplay(){
     document.getElementById('display-value').innerHTML = 0
+    document.getElementById('.').disabled = false;
     start = 0 
 }
+
+function disableButton(){
+    document.getElementById('.').disabled = true;
+}
+
 
 
 
