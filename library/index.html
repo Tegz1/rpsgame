@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <main>
+        <button id="add-book" onclick="showForm()">Add Book</button>
+        <button id="view-book" onclick="displayBook()">View Books</button>
+        <form id="form" >
+            <label for="title">Title: </label>
+           <input type="text" id="title" class="input"/>
+           <br />
+           <br />
+           <label for="author">Author: </label>
+           <input type="text" id="author" class="input"/>
+           <br />
+           <br />
+           <label for="pages">Pages: </label>
+           <input type="number" id="pages" class="input"/>
+           <br />
+           <br />
+           <label for="read">Read: </label>
+           <select name="read" id="read">
+           <option value="true">Yes</option>
+           <option value="false">No</option>
+          
+        </select>
+        <br />
+           <button id="submit" onclick="addBook(event)">Submit</button>
+        </form>
+        <div id ="no-books">
+            <h2>You do not have any books in this library. Add some books with the Add Book button</h2>
+        </div>
+        <div id="books-container">
+            
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
